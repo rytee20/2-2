@@ -15,8 +15,8 @@ class man {
 
 private:
 
-	char* adr; //адрес
-	char* name; //имя
+	char* adr; //Р°РґСЂРµСЃ
+	char* name; //РёРјСЏ
 
 public:
 
@@ -51,15 +51,15 @@ class letter{
 
 private:
 
-	double cost;		// стоимость письма
+	double cost;		// СЃС‚РѕРёРјРѕСЃС‚СЊ РїРёСЃСЊРјР°
 
 public:
 
-	man man_class1; //получателя
-	man man_class2; // отправителя
+	man man_class1; //РїРѕР»СѓС‡Р°С‚РµР»СЏ
+	man man_class2; // РѕС‚РїСЂР°РІРёС‚РµР»СЏ
 	static int count; 
 
-	int ind1;		    // индекс получателя
+	int ind1;		    // РёРЅРґРµРєСЃ РїРѕР»СѓС‡Р°С‚РµР»СЏ
 
 	double GetCost() { return cost; };
 
@@ -79,7 +79,7 @@ public:
 
 	/*~letter()
 	{
-		cout << "Память отчистилась" << endl;
+		cout << "РџР°РјСЏС‚СЊ РѕС‚С‡РёСЃС‚РёР»Р°СЃСЊ" << endl;
 	}*/
 
 	friend void SearchLetterBySender(letter* Obj, int fcount);
@@ -117,7 +117,7 @@ public:
 			letter::count++;
 		}
 		else {
-			cout << "не получилос";
+			cout << "РЅРµ РїРѕР»СѓС‡РёР»РѕСЃ";
 		}
 
 	}
