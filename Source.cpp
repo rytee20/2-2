@@ -2,23 +2,23 @@
 
 //////CONTROL///////
 
-int controlInd() //КОНТРОЛЬ ИНДЕКСА
+int controlInd() //РљРћРќРўР РћР›Р¬ РРќР”Р•РљРЎРђ
 {
 
-	cout << "Введите индекс получателя (индекс должен состоять из шести цифр): " << endl;
-	while (true) { // цикл продолжается до тех пор, пока пользователь не введет корректное значение
+	cout << "Р’РІРµРґРёС‚Рµ РёРЅРґРµРєСЃ РїРѕР»СѓС‡Р°С‚РµР»СЏ (РёРЅРґРµРєСЃ РґРѕР»Р¶РµРЅ СЃРѕСЃС‚РѕСЏС‚СЊ РёР· С€РµСЃС‚Рё С†РёС„СЂ): " << endl;
+	while (true) { // С†РёРєР» РїСЂРѕРґРѕР»Р¶Р°РµС‚СЃСЏ РґРѕ С‚РµС… РїРѕСЂ, РїРѕРєР° РїРѕР»СЊР·РѕРІР°С‚РµР»СЊ РЅРµ РІРІРµРґРµС‚ РєРѕСЂСЂРµРєС‚РЅРѕРµ Р·РЅР°С‡РµРЅРёРµ
 
 		int checkind;
 		cin >> checkind;
 
-		if (cin.fail() or (checkind <= 99999) or (checkind > 999999)) // если предыдущее извлечение оказалось неудачным,
+		if (cin.fail() or (checkind <= 99999) or (checkind > 999999)) // РµСЃР»Рё РїСЂРµРґС‹РґСѓС‰РµРµ РёР·РІР»РµС‡РµРЅРёРµ РѕРєР°Р·Р°Р»РѕСЃСЊ РЅРµСѓРґР°С‡РЅС‹Рј,
 		{
 
-			cin.clear(); // то возвращаем cin в 'обычный' режим работы
-			cin.ignore(32767, '\n'); // и удаляем значения предыдущего ввода из входного буфера
+			cin.clear(); // С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРј cin РІ 'РѕР±С‹С‡РЅС‹Р№' СЂРµР¶РёРј СЂР°Р±РѕС‚С‹
+			cin.ignore(32767, '\n'); // Рё СѓРґР°Р»СЏРµРј Р·РЅР°С‡РµРЅРёСЏ РїСЂРµРґС‹РґСѓС‰РµРіРѕ РІРІРѕРґР° РёР· РІС…РѕРґРЅРѕРіРѕ Р±СѓС„РµСЂР°
 
 		}
-		else // если всё хорошо, то возвращаем checkind
+		else // РµСЃР»Рё РІСЃС‘ С…РѕСЂРѕС€Рѕ, С‚Рѕ РІРѕР·РІСЂР°С‰Р°РµРј checkind
 			return checkind;
 
 	}
@@ -26,10 +26,10 @@ int controlInd() //КОНТРОЛЬ ИНДЕКСА
 }
 
 
-int controlConsent() //КОНТРОЛЬ СОГЛАСИЯ
+int controlConsent() //РљРћРќРўР РћР›Р¬ РЎРћР“Р›РђРЎРРЇ
 {
 
-	cout << "Введите 1 если да, и 0, если нет: " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ 1 РµСЃР»Рё РґР°, Рё 0, РµСЃР»Рё РЅРµС‚: " << endl;
 
 	while (true) {
 
@@ -50,7 +50,7 @@ int controlConsent() //КОНТРОЛЬ СОГЛАСИЯ
 }
 
 
-int controlCount() //КОНТРОЛЬ ПРОСТО ЧИСЕЛ
+int controlCount() //РљРћРќРўР РћР›Р¬ РџР РћРЎРўРћ Р§РРЎР•Р›
 {
 
 	while (true) 
@@ -74,10 +74,10 @@ int controlCount() //КОНТРОЛЬ ПРОСТО ЧИСЕЛ
 }
 
 
-double controlCost() //КОНТРОЛЬ ЦЕНЫ
+double controlCost() //РљРћРќРўР РћР›Р¬ Р¦Р•РќР«
 {
 
-	cout << "Введите цену письма(если число - десятичная дробь, следует отделить дробную часть запятой): " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ С†РµРЅСѓ РїРёСЃСЊРјР°(РµСЃР»Рё С‡РёСЃР»Рѕ - РґРµСЃСЏС‚РёС‡РЅР°СЏ РґСЂРѕР±СЊ, СЃР»РµРґСѓРµС‚ РѕС‚РґРµР»РёС‚СЊ РґСЂРѕР±РЅСѓСЋ С‡Р°СЃС‚СЊ Р·Р°РїСЏС‚РѕР№): " << endl;
 
 	while (true) 
 	{
@@ -100,7 +100,7 @@ double controlCost() //КОНТРОЛЬ ЦЕНЫ
 }
 
 
-char* controlChar() //КОНТОРЛЬ ЧАР
+char* controlChar() //РљРћРќРўРћР Р›Р¬ Р§РђР 
 {
 
 	int i;
@@ -118,7 +118,7 @@ char* controlChar() //КОНТОРЛЬ ЧАР
 				break;
 
 		if (str[i])
-			cout << "Введены не буквы(" << endl << "Повторите ввод" << endl;
+			cout << "Р’РІРµРґРµРЅС‹ РЅРµ Р±СѓРєРІС‹(" << endl << "РџРѕРІС‚РѕСЂРёС‚Рµ РІРІРѕРґ" << endl;
 
 	} while (str[i]);
 
@@ -152,7 +152,7 @@ void printBase(letter* Obj, int fcount)
 }
 
 
-void saveBase(letter* Obj, int fcount) //СОХРАНИТЬ БАЗУ В ФАЙЛ
+void saveBase(letter* Obj, int fcount) //РЎРћРҐР РђРќРРўР¬ Р‘РђР—РЈ Р’ Р¤РђР™Р›
 {
 
 	ofstream fout ("Base.txt", ios::app);
@@ -171,7 +171,7 @@ void saveBase(letter* Obj, int fcount) //СОХРАНИТЬ БАЗУ В ФАЙЛ
 }
 
 
-void createBase(letter* Obj,int fcount) //СОЗДАТЬ БАЗУ
+void createBase(letter* Obj,int fcount) //РЎРћР—Р”РђРўР¬ Р‘РђР—РЈ
 {
 
 		Obj[fcount].setInd(controlInd());
@@ -180,23 +180,23 @@ void createBase(letter* Obj,int fcount) //СОЗДАТЬ БАЗУ
 
 		// for man
 
-		cout << "ведите адрес получателя(ГородУлица; БЕЗ ПРОБЕЛОВ)" << endl;
+		cout << "РІРµРґРёС‚Рµ Р°РґСЂРµСЃ РїРѕР»СѓС‡Р°С‚РµР»СЏ(Р“РѕСЂРѕРґРЈР»РёС†Р°; Р‘Р•Р— РџР РћР‘Р•Р›РћР’)" << endl;
 		Obj[fcount].man_class1.setAdr(controlChar());
 
-		cout << "Введите имя получателя(ИмяФамилия; БЕЗ ПРОБЕЛОВ):" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РїРѕР»СѓС‡Р°С‚РµР»СЏ(РРјСЏР¤Р°РјРёР»РёСЏ; Р‘Р•Р— РџР РћР‘Р•Р›РћР’):" << endl;
 		Obj[fcount].man_class1.setName(controlChar());
 
-		cout << "ведите адрес отправителя(ГородУлица; БЕЗ ПРОБЕЛОВ):" << endl;
+		cout << "РІРµРґРёС‚Рµ Р°РґСЂРµСЃ РѕС‚РїСЂР°РІРёС‚РµР»СЏ(Р“РѕСЂРѕРґРЈР»РёС†Р°; Р‘Р•Р— РџР РћР‘Р•Р›РћР’):" << endl;
 		Obj[fcount].man_class2.setAdr(controlChar());
 
-		cout << "Введите имя отправителя(ИмяФамилия; БЕЗ ПРОБЕЛОВ):" << endl;
+		cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РѕС‚РїСЂР°РІРёС‚РµР»СЏ(РРјСЏР¤Р°РјРёР»РёСЏ; Р‘Р•Р— РџР РћР‘Р•Р›РћР’):" << endl;
 		Obj[fcount].man_class2.setName(controlChar());
 
 		cout << endl;
 
 }
 
-void readBase(letter*& Obj, int fcount) //СЧИТАТЬ БАЗУ С ФАЙЛА
+void readBase(letter*& Obj, int fcount) //РЎР§РРўРђРўР¬ Р‘РђР—РЈ РЎ Р¤РђР™Р›Рђ
 {
 
 	ifstream fin;
@@ -243,7 +243,7 @@ void readBase(letter*& Obj, int fcount) //СЧИТАТЬ БАЗУ С ФАЙЛА
 	if (count1 == 0)
 	{
 
-		cout << "Файл пуст";
+		cout << "Р¤Р°Р№Р» РїСѓСЃС‚";
 
 	}
 
@@ -288,15 +288,15 @@ void readBase(letter*& Obj, int fcount) //СЧИТАТЬ БАЗУ С ФАЙЛА
 	ofstream fout;
 	int consent;
 
-	cout << "Удалить существующую базу? Если да, то в этом случае ее невозможно будет восстановить (1 - да, 0 - нет)" << endl;
+	cout << "РЈРґР°Р»РёС‚СЊ СЃСѓС‰РµСЃС‚РІСѓСЋС‰СѓСЋ Р±Р°Р·Сѓ? Р•СЃР»Рё РґР°, С‚Рѕ РІ СЌС‚РѕРј СЃР»СѓС‡Р°Рµ РµРµ РЅРµРІРѕР·РјРѕР¶РЅРѕ Р±СѓРґРµС‚ РІРѕСЃСЃС‚Р°РЅРѕРІРёС‚СЊ (1 - РґР°, 0 - РЅРµС‚)" << endl;
 	consent = controlConsent();
 	if (consent == 1) {
 		fout.open("Base.txt", ofstream::out | ofstream::trunc);
 		fout.close();
-		cout << "База успешно удалена" << endl;
+		cout << "Р‘Р°Р·Р° СѓСЃРїРµС€РЅРѕ СѓРґР°Р»РµРЅР°" << endl;
 	}
 	else
-		cout << "Удаление отменено" << endl;
+		cout << "РЈРґР°Р»РµРЅРёРµ РѕС‚РјРµРЅРµРЅРѕ" << endl;
 
 }*/
 
@@ -304,12 +304,12 @@ void readBase(letter*& Obj, int fcount) //СЧИТАТЬ БАЗУ С ФАЙЛА
 //////FUNCTIONS//////
 
 
-void SearchLetterBySender(letter* Obj, int fcount) //ПОИСК ПИСЬМА ПО ОТПРАВИТЕЛЮ
+void SearchLetterBySender(letter* Obj, int fcount) //РџРћРРЎРљ РџРРЎР¬РњРђ РџРћ РћРўРџР РђР’РРўР•Р›Р®
 {
 
 	char* foundname2;
 	int count1 = 0;
-	cout << "Введите имя отправителя(ИмяФамилия; БЕЗ ПРОБЕЛОВ): " << endl;
+	cout << "Р’РІРµРґРёС‚Рµ РёРјСЏ РѕС‚РїСЂР°РІРёС‚РµР»СЏ(РРјСЏР¤Р°РјРёР»РёСЏ; Р‘Р•Р— РџР РћР‘Р•Р›РћР’): " << endl;
 	foundname2 = controlChar();
 	int fnumber = 0;
 
@@ -331,14 +331,14 @@ void SearchLetterBySender(letter* Obj, int fcount) //ПОИСК ПИСЬМА ПО ОТПРАВИТЕЛЮ
 	if (count1 == 0) 
 	{
 
-		cout << "Не найдено писем, отправленных этим человеком" << endl;
+		cout << "РќРµ РЅР°Р№РґРµРЅРѕ РїРёСЃРµРј, РѕС‚РїСЂР°РІР»РµРЅРЅС‹С… СЌС‚РёРј С‡РµР»РѕРІРµРєРѕРј" << endl;
 
 	}
 
 }
 
 
-void FilterByIndex(letter* Obj,int fcount) //ФИЛЬТР ПО НДЕКСУ
+void FilterByIndex(letter* Obj,int fcount) //Р¤РР›Р¬РўР  РџРћ РќР”Р•РљРЎРЈ
 {
 
 	int foundind;
@@ -363,14 +363,14 @@ void FilterByIndex(letter* Obj,int fcount) //ФИЛЬТР ПО НДЕКСУ
 	if (count1 == 0) 
 	{
 
-		cout << "Не найдено писем с данным индексом" << endl;
+		cout << "РќРµ РЅР°Р№РґРµРЅРѕ РїРёСЃРµРј СЃ РґР°РЅРЅС‹Рј РёРЅРґРµРєСЃРѕРј" << endl;
 
 	}
 
 }
 
 
-void SortByCostIncreasing(letter* Obj,int fcount) //СОРТИРОВКА
+void SortByCostIncreasing(letter* Obj,int fcount) //РЎРћР РўРР РћР’РљРђ
 {
 
 	for (int j = 0; j < fcount - 1; j++)
